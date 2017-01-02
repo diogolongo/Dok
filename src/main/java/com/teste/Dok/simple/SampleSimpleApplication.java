@@ -50,10 +50,13 @@ public class SampleSimpleApplication implements CommandLineRunner {
 			Date currentDate = new Date();
 			Calendar instance = Calendar.getInstance();
 			System.out.println("calendar ----------- " + instance);
+			System.out.println(Calendar.getInstance(TimeZone.getTimeZone("GMT")));
 			System.out.println("JREion : " + ver);
 			System.out.println(currentDate);
 			// Default timezone from the system is used.
 			TimeZone tz = TimeZone.getDefault();
+			System.out.println(tz.getDisplayName());
+			System.out.println(tz.getID());
 			// Could manually set the timezone above. e.g :
 			// TimeZone tz = TimeZone.getTimeZone("America/New_York");
 			System.out.println("TimeZoneed : " + tz.getDisplayName(tz.inDaylightTime(currentDate), TimeZone.LONG));
